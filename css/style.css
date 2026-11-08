@@ -1,0 +1,1411 @@
+body {
+	margin: 0;
+	font-family: "Merriweather", Arial, sans-serif;
+	line-height: 1.6;
+	letter-spacing: 0.02em;
+	word-spacing: 0.1em;
+	color: #222222;
+}
+
+main.met-zijbalk p, main.met-zijbalk li, main.met-zijbalk td, main.met-zijbalk th, main.met-zijbalk figcaption {
+	font-family: "Merriweather", Georgia, serif;
+}
+
+h1, h2, h3 {
+	font-family: "Quicksand", Arial, sans-serif;
+	line-height: 1.2;
+	letter-spacing: 0.04em;
+}
+
+a:link {
+	color: #9C2113;
+}
+
+a:hover {
+	color: #66180F;
+	background-color: #FFD9C2;
+}
+
+a:active {
+	color: #F9ECE5;
+	background-color: #9C2113;
+}
+
+/* Top navigatiebalk */
+nav.hoofdnav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #362C29;
+	padding: 0.75rem 1.5rem;
+}
+
+nav.hoofdnav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 2.5rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav.hoofdnav a {
+	font-family: "Quicksand", Arial, sans-serif;
+	font-weight: 700;
+	color: #F9ECE5;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 0.9rem;
+	letter-spacing: 0.08em;
+	padding: 0.25rem 0.5rem;
+}
+
+nav.hoofdnav a.logo img {
+	display: block;
+	height: 2.5rem;
+	width: auto;
+}
+
+nav.hoofdnav a:hover {
+	background-color: #66180F;
+}
+
+nav.hoofdnav a.logo:hover {
+	background-color: transparent;
+}
+
+nav.hoofdnav a.btn-contact {
+	background-color: #9C2113;
+	padding: 0.4rem 1rem;
+	border-radius: 2rem;
+}
+
+nav.hoofdnav a.btn-contact:hover {
+	background-color: #66180F;
+}
+
+nav.hoofdnav a[aria-current="page"] {
+	border-bottom: 0.15rem solid #9C2113;
+}
+
+nav.hoofdnav .menu-toggle, nav.hoofdnav .hamburger {
+	display: none;
+}
+
+/* Header met lichtgroene achtergrond: afbeelding 1/3, tekst 2/3 */
+header.pagina-header {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	min-height: 15rem;
+	padding: 2rem 0;
+	color: #000000;
+	background-color: #179070;
+}
+
+header.pagina-header > figure {
+	grid-column: 1;
+	grid-row: 1;
+	margin: 0;
+	padding-left: 5rem;
+}
+
+header.pagina-header > figure img {
+	width: 60%;
+	height: auto;
+}
+
+header.pagina-header > h1 {
+	grid-column: 2;
+	grid-row: 1;
+	padding-left: 20rem;
+	margin: 1.5rem 0 1rem;
+	font-size: 4rem;
+}
+
+header.pagina-header > h1 span {
+	display: block;
+}
+
+header.pagina-header.zonder-afbeelding {
+	box-sizing: border-box;
+	grid-template-columns: 1fr;
+	width: calc(100% - 4rem);
+	max-width: 62rem;
+	margin: 2rem auto;
+	text-align: center;
+	color: #F9ECE5;
+	background-color: #014B43;
+	border-radius: 1.5rem;
+}
+
+header.pagina-header.zonder-afbeelding > h1 {
+	grid-column: 1;
+	padding: 0 1.5rem;
+	margin: 0;
+	font-size: 3rem;
+}
+
+main {
+	max-width: 62rem;
+	margin: 0 auto;
+	padding: 1.5rem 1rem;
+}
+
+main::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+main > section > p, article > p {
+	margin: 0 0 1.5rem;
+}
+
+main > section > p::first-letter {
+	font-weight: bold;
+}
+
+article {
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+article::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+article > figure, main > section > figure {
+	float: right;
+	width: 35%;
+	margin: 0 0 1rem 1.5rem;
+}
+
+main.met-zijbalk > article {
+	display: flex;
+	flex-direction: column;
+}
+
+main.met-zijbalk > article > figure {
+	order: 1;
+	align-self: center;
+	float: none;
+	width: 100%;
+	max-width: 16rem;
+	margin: 1rem 0 0;
+}
+
+main.met-zijbalk > article > figure img {
+	box-sizing: border-box;
+	border: 0.3rem solid #014B43;
+}
+
+main.met-zijbalk > article > figure figcaption {
+	padding: 0.5rem 0.75rem;
+	color: #F9ECE5;
+	background-color: #014B43;
+}
+
+figure img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+figcaption {
+	font-size: 0.875rem;
+	font-style: italic;
+}
+
+main > figure {
+	float: right;
+	width: 30%;
+	margin: 0 0 1.5rem;
+}
+
+main > figure img, main.home > section.zijkant > figure img {
+	box-sizing: border-box;
+	border: 0.15rem solid #014B43;
+	border-radius: 0.5rem;
+}
+
+main > aside {
+	float: right;
+	clear: right;
+	width: 30%;
+	box-sizing: border-box;
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: #179070;
+	color: #000000;
+}
+
+main > aside > h2, main > aside > h3, main.home > section.zijkant > aside > h2, main.home > section.zijkant > aside > h3 {
+	text-align: center;
+}
+
+main.met-zijbalk {
+	display: grid;
+	grid-template-columns: 16rem minmax(0, 1fr);
+	column-gap: 2rem;
+	align-items: start;
+	max-width: 62rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+main.met-zijbalk::after {
+	display: none;
+}
+
+main.met-zijbalk > aside {
+	grid-column: 1;
+	grid-row: 1 / span 99;
+	position: sticky;
+	top: 1.5rem;
+	float: none;
+	clear: none;
+	width: auto;
+	height: calc(100vh - 3rem);
+	margin: 0;
+	overflow-y: auto;
+	border-radius: 1.5rem;
+	background-color: #179070;
+	color: #F9ECE5;
+}
+
+main.met-zijbalk > aside ul {
+	margin: 2rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+main.met-zijbalk > aside li {
+	margin-bottom: 1.75rem;
+}
+
+main.met-zijbalk > aside a:link, main.met-zijbalk > aside a:visited {
+	display: block;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.75rem;
+	color: #F9ECE5;
+}
+
+main.met-zijbalk > aside a:hover {
+	color: #F9ECE5;
+	background-color: #66180F;
+}
+
+main.met-zijbalk > article {
+	grid-column: 2;
+	margin: 0 0 2rem;
+	padding: 0;
+}
+
+main.met-zijbalk > article > h2 {
+	align-self: flex-start;
+	margin-top: 0;
+}
+
+main.met-zijbalk > aside > h2::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+	background-color: #014B43;
+}
+
+main.met-zijbalk > article > h2::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+	background-color: #179070;
+}
+
+main.contact {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+main.contact::after {
+	display: none;
+}
+
+main.contact > article {
+    margin: 0;
+    padding: 1.5rem;
+    border-radius: 0;
+    background-color: transparent;
+    color: #000000;
+}
+
+main.contact > article > p {
+	margin: 0;
+}
+
+main.contact > article > p + p {
+	margin-top: 1rem;
+}
+
+main.contact > h2 {
+	align-self: flex-start;
+	margin: 0;
+}
+
+main.contact > h2::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+	background-color: #179070;
+}
+
+main.contact > article a:link, main.contact > article a:visited {
+	color: #000000;
+}
+
+main.contact > article a:hover {
+	color: #F9ECE5;
+	background-color: #66180F;
+}
+
+main.contact > figure {
+	float: none;
+	width: 100%;
+	max-width: 18rem;
+	margin: 0 auto;
+}
+
+main.contact > figure img {
+	border-radius: 0;
+}
+
+main.contact > figure figcaption {
+	padding: 0.5rem 0.75rem;
+	color: #F9ECE5;
+	background-color: #014B43;
+}
+
+main > section.kaarten, main > section.keuze {
+	width: 60%;
+}
+
+main > section.kaarten {
+	margin-bottom: 2rem;
+}
+
+/* Startpagina: links de kaarten, rechts de afbeelding en de aside (even lang als de kaarten) */
+main.home {
+	display: grid;
+	grid-template-columns: 60% 30%;
+	justify-content: space-between;
+}
+
+main.home::after {
+	display: none;
+}
+
+main.home > section:first-child {
+	grid-column: 1 / -1;
+}
+
+main.home > section.kaarten {
+	grid-column: 1;
+	grid-row: 2;
+	align-self: start;
+	width: auto;
+}
+
+main.home > section.keuze {
+	grid-column: 1;
+	grid-row: 3;
+	width: auto;
+}
+
+/* Rechterkolom: afbeelding met daaronder de aside, die meegroeit tot de onderkant van de kaarten */
+main.home > section.zijkant {
+	grid-column: 2;
+	grid-row: 2 / span 2;
+	display: flex;
+	flex-direction: column;
+}
+
+main.home > section.zijkant > figure {
+	float: none;
+	width: auto;
+	margin: 0 0 2rem;
+}
+
+main.home > section.zijkant > aside {
+	flex: 1;
+	box-sizing: border-box;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: #179070;
+	color: #000000;
+}
+
+main > section.kaarten > article {
+	text-align: center;
+}
+
+main > section.kaarten > article > h2 span {
+	display: block;
+}
+
+main > section.kaarten > article > a:link, main > section.kaarten > article > a:visited {
+	padding: 1.25rem 3rem;
+	border-radius: 50%;
+	font-size: 1.5rem;
+}
+
+/* Kaarten onder elkaar */
+.kaarten {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+}
+
+.kaarten > article {
+	margin-bottom: 0;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	background-color: #014B43;
+	color: #F9ECE5;
+}
+
+/* Kaart met tekst links, afbeelding rechts en knop onderaan */
+.keuze .kaarten > article {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	column-gap: 1.5rem;
+}
+
+.keuze .kaarten > article::after {
+	display: none;
+}
+
+.keuze .kaarten > article > h3 {
+	margin: 0 0 0.5rem;
+	font-size: 2rem;
+}
+
+.keuze .kaarten > article > p {
+	margin: 0;
+}
+
+.keuze .kaarten > article > figure {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	width: auto;
+	max-width: none;
+	margin: 0;
+}
+
+.keuze .kaarten > article > a {
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+/* Elektrisch (tweede kaart): afbeelding links, kop en tekst rechts */
+.keuze .kaarten > article:nth-child(2) {
+	grid-template-columns: 1fr 2fr;
+}
+
+.keuze .kaarten > article:nth-child(2) > figure {
+	grid-column: 1;
+}
+
+.keuze .kaarten > article:nth-child(2) > h3, .keuze .kaarten > article:nth-child(2) > p {
+	grid-column: 2;
+}
+
+.keuze > h2 {
+	display: inline-block;
+}
+
+.keuze > h2::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+	background-color: #179070;
+}
+
+main > aside > h3::after, main.home > section.zijkant > aside > h3::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+	background-color: #014B43;
+}
+
+/* Knoppen */
+.kaarten > article a:link, .kaarten > article a:visited {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin-top: 1rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-family: "Quicksand", Arial, sans-serif;
+	font-size: 1rem;
+	color: #F9ECE5;
+	background-color: #9C2113;
+}
+
+.kaarten > article a:hover {
+	background-color: #66180F;
+}
+
+aside.veilig {
+	border-width: 0.3rem;
+	border-style: double;
+	border-color: #9C2113;
+}
+
+aside.veilig > p {
+	text-indent: 1em;
+}
+
+table {
+	width: 100%;
+	margin: 1rem 0;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 0.5em 0.75em;
+	text-align: left;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #CFF;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #FFF;
+}
+
+/* Tabel in een lichtgroene box */
+main.met-zijbalk table {
+	box-sizing: border-box;
+	margin: 1rem 0 0;
+	padding: 0 1.5rem 1.5rem;
+	border-collapse: separate;
+	border-spacing: 0;
+	border-radius: 0 0 1rem 1rem;
+	background-color: #179070;
+}
+
+main.met-zijbalk caption {
+	padding: 1rem 1.5rem 0.75rem;
+	border-radius: 1rem 1rem 0 0;
+	font-family: "Quicksand", Arial, sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: left;
+	color: #F9ECE5;
+	background-color: #179070;
+}
+
+main.met-zijbalk th {
+	color: #F9ECE5;
+}
+
+/* Formulier */
+fieldset {
+	margin: 0 0 1rem;
+	border-width: 0.15rem;
+	border-style: solid;
+	border-color: #0d4738;
+	background-color: #179070;
+	color: #000000;
+	padding: 1.5rem;
+}
+
+fieldset fieldset {
+	border-color: #014B43;
+	margin-top: 1rem;
+}
+
+legend {
+	padding: 0 0.5rem;
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	margin-top: 1rem;
+}
+
+fieldset > fieldset label {
+	display: inline;
+	margin-right: 1rem;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.5rem;
+	font: inherit;
+	color: #222222;
+	background-color: #FFF;
+	border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+	display: block;
+	margin: 1.5rem auto 0;
+	padding: 0.75rem 1.5rem;
+	border-radius: 2rem;
+	font: inherit;
+	color: #F9ECE5;
+	background-color: #9C2113;
+	border: 0;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #66180F;
+}
+
+main.contact form > fieldset > label {
+	padding: 0.5rem 0.75rem;
+	font-family: "Quicksand", Arial, sans-serif;
+	font-weight: 700;
+	color: #F9ECE5;
+	background-color: #014B43;
+}
+
+main.contact form > fieldset > label[for="telefoon"] {
+	color: #F9ECE5;
+	background-color: #666666;
+}
+
+main.contact form > fieldset > input[type="text"], main.contact form > fieldset > input[type="email"], main.contact form > fieldset > input[type="tel"], main.contact form > fieldset > textarea {
+	border: 1px solid #000000;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+main.contact #telefoon {
+	width: 50%;
+	margin-bottom: 1.5rem;
+}
+
+main.contact form > fieldset > fieldset {
+	padding: 0;
+	border: 0;
+}
+
+main.contact form > fieldset > fieldset > legend {
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	font-family: "Quicksand", Arial, sans-serif;
+	font-weight: 700;
+	color: #F9ECE5;
+	background-color: #014B43;
+}
+
+main.contact form > fieldset > fieldset label {
+	display: inline-block;
+	padding: 0.5rem 0;
+	color: #FFFFFF;
+	background-color: transparent;
+}
+
+/* Cookiemelding: een dialog met een formulier dat zichzelf sluit */
+.cookies {
+	position: fixed;
+	top: auto;
+	right: 1rem;
+	bottom: 1rem;
+	left: auto;
+	z-index: 9999;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	width: 16rem;
+	margin: 0;
+	padding: 1rem;
+	border: 0;
+	font-size: 0.875rem;
+	color: #F9ECE5;
+	background-color: #362C29;
+}
+
+.cookies:not([open]) {
+	display: none;
+}
+
+.cookies > p {
+	flex-basis: 100%;
+	margin: 0;
+}
+
+.cookies > form {
+	display: flex;
+	flex-basis: 100%;
+	gap: 0.75rem;
+	margin: 0;
+}
+
+.cookies button {
+	flex: 1;
+	padding: 0.5rem 0.75rem;
+	border: 0.1rem solid #9C2113;
+	border-radius: 2rem;
+	font-family: "Quicksand", Arial, sans-serif;
+	font-size: 0.875rem;
+	font-weight: 700;
+	color: #F9ECE5;
+	background-color: #9C2113;
+	cursor: pointer;
+}
+
+.cookies button:hover {
+	background-color: #66180F;
+	border-color: #3d0e09;
+}
+
+.cookies button:last-of-type {
+	border-color: #F9ECE5;
+	background-color: transparent;
+}
+
+.cookies button:last-of-type:hover {
+	color: #362C29;
+	background-color: #F9ECE5;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 26rem 1fr auto;
+	column-gap: 0;
+	align-items: center;
+	padding: 3.5rem 10rem 3.5rem 0;
+	color: #F9ECE5;
+	background-color: #014B43;
+}
+
+footer > a {
+	justify-self: center;
+}
+
+footer > a:hover {
+	background-color: transparent;
+}
+
+footer > a > img {
+	display: block;
+	width: 8rem;
+	height: auto;
+}
+
+footer > section > h2, footer > nav > h2 {
+	display: inline-block;
+	margin: 0 0 0.5rem;
+}
+
+footer > section > h2::after, footer > nav > h2::after {
+	content: "";
+	display: block;
+	height: 0.3rem;
+	margin-top: 0.5rem;
+	border-radius: 0.3rem;
+}
+
+footer > section > h2::after {
+	background-color: #179070;
+}
+
+footer > nav > h2::after {
+	background-color: #014B43;
+}
+
+footer > section {
+	margin-left: 0;
+}
+
+footer > section > p {
+	max-width: 45rem;
+	margin: 0 0 0.5rem;
+}
+
+footer > section > p:last-child {
+	text-indent: 1em;
+}
+
+footer > nav {
+	margin-left: 3rem;
+	margin-right: 9rem;
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+	background-color: #179070;
+}
+
+footer nav ul {
+	margin: 0;
+	padding: 0 0 0 1.5rem;
+	list-style: disc;
+}
+
+footer nav li {
+	margin-bottom: 1rem;
+}
+
+footer nav li:last-child {
+	margin-bottom: 0;
+}
+
+footer nav a:link, footer nav a:visited {
+	color: #F9ECE5;
+	text-decoration: none;
+}
+
+footer nav a:hover {
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+/* Responsive: telefoon <= 768px, pc > 768px */
+@media (max-width: 768px) {
+	.alleen-desktop {
+		display: none;
+	}
+
+	nav.hoofdnav {
+		flex-direction: column;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
+
+	nav.hoofdnav a.logo img {
+		height: 1.75rem;
+	}
+
+	nav.hoofdnav ul {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		gap: 0.5rem;
+		width: 100%;
+	}
+
+	nav.hoofdnav a {
+		font-size: 0.75rem;
+		letter-spacing: 0.02em;
+		padding: 0.25rem 0.2rem;
+	}
+
+	nav.hoofdnav a.btn-contact {
+		padding: 0.25rem 0.5rem;
+	}
+
+	nav.hoofdnav.met-menu {
+		position: relative;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0;
+		padding: 0.5rem 1rem;
+	}
+
+	nav.hoofdnav.met-menu a.logo img {
+		height: 2rem;
+	}
+
+	nav.hoofdnav.met-menu .menu-toggle {
+		display: block;
+		position: absolute;
+		top: 0.5rem;
+		right: 1rem;
+		z-index: 1;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: 0;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	nav.hoofdnav.met-menu .hamburger {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.4rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin: 0;
+		border-radius: 0.5rem;
+	}
+
+	nav.hoofdnav.met-menu .menu-toggle:focus + .hamburger {
+		background-color: #66180F;
+	}
+
+	nav.hoofdnav.met-menu .hamburger span {
+		display: block;
+		width: 1.75rem;
+		height: 0.2rem;
+		border-radius: 0.2rem;
+		background-color: #F9ECE5;
+	}
+
+	nav.hoofdnav.met-menu ul {
+		display: none;
+		flex-basis: 100%;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		gap: 0.25rem;
+		padding-top: 0.5rem;
+	}
+
+	nav.hoofdnav.met-menu .menu-toggle:checked ~ ul {
+		display: flex;
+	}
+
+	nav.hoofdnav.met-menu ul a {
+		display: block;
+		padding: 0.75rem 0.5rem;
+		font-size: 1rem;
+		letter-spacing: 0.08em;
+	}
+
+	nav.hoofdnav.met-menu ul a.btn-contact {
+		text-align: center;
+	}
+
+	header.pagina-header {
+		grid-template-columns: 1fr;
+		min-height: 0;
+		padding: 1.5rem 0;
+	}
+
+	header.pagina-header > figure {
+		grid-row: auto;
+		padding: 0 1.5rem;
+	}
+
+	header.pagina-header > figure img {
+		width: 50%;
+	}
+
+	header.pagina-header > h1 {
+		grid-column: 1;
+		grid-row: auto;
+		padding: 0 1.5rem;
+		font-size: 1.75rem;
+	}
+
+	header.pagina-header:not(.zonder-afbeelding) > h1 {
+		font-size: 5.5vw;
+		text-align: center;
+		white-space: nowrap;
+	}
+
+	header.pagina-header:not(.zonder-afbeelding) > h1 span {
+		display: inline;
+	}
+
+	header.pagina-header.zonder-afbeelding {
+		width: 100%;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	header.pagina-header.zonder-afbeelding > h1 {
+		font-size: 1.75rem;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main > figure {
+		width: 100%;
+	}
+
+	main > aside {
+		order: 1;
+		width: 100%;
+	}
+
+	main.met-zijbalk {
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem 1rem;
+	}
+
+	main.home {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main.home > section.zijkant {
+		display: contents;
+	}
+
+	main.home > section.zijkant > figure {
+		display: none;
+	}
+
+	main.home > section.zijkant > aside {
+		order: 1;
+		flex: none;
+		margin-top: 1.5rem;
+		padding: 0;
+		border: 0;
+		color: #222222;
+		background-color: transparent;
+	}
+
+	main.home > section.zijkant > aside > h2::before {
+		content: "";
+		display: block;
+		height: 0.3rem;
+		margin-bottom: 0.75rem;
+		border-radius: 0.3rem;
+		background-color: #014B43;
+	}
+
+	main.home > section.zijkant > aside > h3::after {
+		display: none;
+	}
+
+	main.home > section.kaarten, main.home > section.keuze > section.kaarten {
+		display: none;
+	}
+
+	figure.alleen-mobiel {
+		margin: 1rem 1rem 0;
+		text-align: center;
+	}
+
+	figure.alleen-mobiel img {
+		width: 40%;
+		margin: 0 auto;
+	}
+
+	ul.tegels {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem 1rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul.tegels > li::before {
+		content: "";
+		display: block;
+		height: 0;
+		padding-top: calc(100% - 0.4rem);
+		margin-bottom: 0.75rem;
+		border: 0.2rem solid #014B43;
+		border-radius: 1rem;
+		background-color: #014B43;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	ul.tegels > li.tegel-kappen::before {
+		background-image: url("../img/kappen3.jpeg");
+	}
+
+	ul.tegels > li.tegel-motor::before {
+		background-image: url("../img/home2motor.jpeg");
+	}
+
+	ul.tegels > li.tegel-elektrisch::before {
+		background-image: url("../img/home3elektrisch.jpeg");
+	}
+
+	ul.tegels > li.tegel-verlichting::before {
+		background-image: url("../img/home4verlichting.jpeg");
+	}
+
+	ul.tegels a:link, ul.tegels a:visited {
+		display: block;
+		padding: 0.6rem 1rem;
+		border-radius: 2rem;
+		text-align: center;
+		text-decoration: none;
+		font-family: "Quicksand", Arial, sans-serif;
+		font-weight: 700;
+		color: #F9ECE5;
+		background-color: #9C2113;
+	}
+
+	ul.tegels a::after {
+		content: " \2192";
+	}
+
+	ul.tegels a:hover {
+		background-color: #66180F;
+	}
+
+	main.met-zijbalk > aside {
+		display: none;
+	}
+
+	main.met-zijbalk > article > figure {
+		max-width: 16rem;
+	}
+
+	main.met-zijbalk figcaption {
+		display: none;
+	}
+
+	main.met-zijbalk table {
+		padding: 0 0.75rem 1rem;
+		font-size: 0.875rem;
+	}
+
+	main.met-zijbalk caption {
+		padding: 0.75rem 0.75rem 0.5rem;
+		font-size: 1.25rem;
+	}
+
+	th, td {
+		padding: 0.4em;
+	}
+
+	main.contact > article:first-of-type {
+		margin: 0;
+		padding: 1.5rem;
+		background-color: transparent;
+		color: #000000;
+	}
+
+	main.contact > article:last-of-type {
+		margin: 0;
+		padding: 1.5rem;
+		border-radius: 1rem;
+		background-color: #179070;
+		color: #F9ECE5;
+	}
+
+	main.contact > h2, main.contact > figure {
+    display: none;
+	}
+
+	main.contact > article a:link, main.contact > article a:visited {
+	color: #000000;
+	}
+	main.contact form > fieldset {
+		padding: 0;
+		border: 0;
+		color: #000000;
+		background-color: transparent;
+	}
+
+	main.contact form > fieldset > label, main.contact form > fieldset > label[for="telefoon"] {
+		padding: 0;
+		color: #000000;
+		text-decoration: underline;
+		background-color: transparent;
+	}
+
+	main.contact form > fieldset > fieldset {
+		background-color: transparent;
+	}
+
+	main.contact form > fieldset > fieldset > legend {
+		float: none;
+		width: auto;
+		padding: 0;
+		color: #000000;
+		text-decoration: underline;
+		background-color: transparent;
+	}
+
+	main.contact form > fieldset > fieldset label {
+		color: #000000;
+	}
+
+	main.contact form > fieldset > input[type="text"], main.contact form > fieldset > input[type="email"], main.contact form > fieldset > input[type="tel"], main.contact form > fieldset > textarea {
+		background-color: #FFF0E0;
+	}
+
+	main.contact #onderwerp {
+		height: 5.5rem;
+	}
+
+	fieldset {
+		padding: 1rem;
+	}
+
+	main > section.kaarten, main > section.keuze {
+		width: 100%;
+	}
+
+	main > section.kaarten > article > a:link, main > section.kaarten > article > a:visited {
+		padding: 0.75rem 1.75rem;
+		font-size: 1.1rem;
+	}
+
+	article > figure, main > section > figure {
+		float: none;
+		width: 100%;
+		margin: 0 0 1rem;
+	}
+
+	.kaarten > article {
+		padding: 1rem;
+	}
+
+	.keuze .kaarten > article {
+		grid-template-columns: 1fr;
+	}
+
+	.keuze .kaarten > article > h3 {
+		font-size: 1.5rem;
+	}
+
+	.keuze .kaarten > article > figure {
+		grid-column: 1;
+		grid-row: auto;
+		width: 70%;
+		margin: 1rem auto 0;
+	}
+
+	.keuze .kaarten > article:nth-child(2) {
+		grid-template-columns: 1fr;
+	}
+
+	.keuze .kaarten > article:nth-child(2) > h3, .keuze .kaarten > article:nth-child(2) > p {
+		grid-column: 1;
+	}
+
+	.cookies {
+		right: 0.5rem;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		width: auto;
+		padding: 0.75rem;
+	}
+
+	footer {
+		grid-template-columns: 1fr;
+		row-gap: 1rem;
+		padding: 2rem 1.5rem;
+	}
+
+	footer > a {
+		justify-self: center;
+	}
+
+	footer > a > img {
+		width: 5rem;
+	}
+
+	footer > section {
+		margin-left: 0;
+	}
+
+	footer > section > h2 {
+		display: table;
+		margin: 0 auto 0.5rem;
+	}
+
+	footer > nav {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+		border-radius: 0;
+		background-color: transparent;
+	}
+
+	footer > nav > h2 {
+		display: table;
+		margin: 0 auto 0.5rem;
+	}
+
+	footer > nav > h2::after {
+		display: none;
+	}
+
+	footer nav ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(3, auto);
+		grid-auto-flow: column;
+		column-gap: 1.5rem;
+	}
+}
+
+@media (min-width: 768.02px) {
+	.alleen-mobiel {
+		display: none;
+	}
+
+	main.contact form > fieldset {
+		display: grid;
+		grid-template-columns: 11rem minmax(0, 1fr);
+		gap: 1rem;
+		min-width: 0;
+	}
+
+	main.contact form > fieldset > fieldset {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		grid-column: 1 / -1;
+		margin: 0;
+	}
+
+	main.contact form > fieldset > fieldset > legend {
+		flex: none;
+		width: 11rem;
+		margin-right: 1rem;
+	}
+
+	main.contact form > fieldset > label {
+		margin: 0;
+	}
+
+	main.contact form > fieldset > label[for="bericht"] {
+		align-self: start;
+	}
+
+	main.contact label[for="telefoon"] {
+		margin-bottom: 1.5rem;
+	}
+
+	main.contact form > fieldset > input[type="submit"] {
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 480px) {
+	nav.hoofdnav ul {
+		gap: 0;
+	}
+
+	nav.hoofdnav a {
+		font-size: 2.5vw;
+		padding: 0.25rem 0.15rem;
+	}
+
+	nav.hoofdnav a.btn-contact {
+		padding: 0.25rem 0.4rem;
+	}
+}
